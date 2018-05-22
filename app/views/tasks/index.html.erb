@@ -1,6 +1,9 @@
-
+<div class="container">
+<div class="index-item">
 <h1>Task List</h1>
-<ul>
+</div>
+
+<ul class="line-item">
   <% @tasks.each do |task| %>
     <li>  <%= check_box_tag task, 1, task.completed %>
       <%= link_to task.title, task_path(task) %>
@@ -11,3 +14,4 @@
   <% end %>
 </ul>
 <%= link_to "Add Task", new_task_path %>
+</div>
