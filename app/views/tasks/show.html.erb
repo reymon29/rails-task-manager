@@ -1,0 +1,7 @@
+<%= link_to "Edit Page", edit_task_path(@task) %>
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<%= check_box_tag @task, 1, @task.completed %>
+<%= @task.completed ? "Task completed" : "Task not compeleted" %>
+
+<%= link_to "Back to list", tasks_path %>
